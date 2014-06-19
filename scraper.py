@@ -5,7 +5,7 @@ import re
 
 types = ['0','1','2','3','4','5','6','7','8','9','10']
 for type in types:
-    url = "http://www.metacritic.com/browse/games/release-date/available/gamecube/name?hardware=all&view=detailed&page=%s" % type
+    url = "http://www.metacritic.com/browse/games/release-date/available/pc/name?hardware=all&view=detailed&page=%s" % type
     html = scraperwiki.scrape(url)
     root = lxml.html.fromstring(html)
     products = root.xpath("//ol[@class='list_products list_product_summaries']/li")
